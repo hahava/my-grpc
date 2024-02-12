@@ -36,12 +36,12 @@ subprojects {
 
     apply(plugin = "kotlin")
     apply(plugin = "kotlin-spring") //all-open
-//    apply(plugin = "kotlin-jpa")
+    apply(plugin = "kotlin-jpa")
 
     dependencies {
         // springboot
         implementation("org.springframework.boot:spring-boot-starter-web")
-//        implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+        implementation("org.springframework.boot:spring-boot-starter-data-jpa")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
         developmentOnly("org.springframework.boot:spring-boot-devtools")
 
@@ -50,7 +50,7 @@ subprojects {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
         // DB
-//        implementation("org.postgresql:postgresql:42.3.3")
+        implementation("mysql:mysql-connector-java:8.0.33")
 
         // test
         testImplementation("org.springframework.boot:spring-boot-starter-test")
